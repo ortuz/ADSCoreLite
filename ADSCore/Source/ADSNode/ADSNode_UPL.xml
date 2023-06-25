@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<init>
+		<log text="ADSCore"/>
+			<setStringFromProperty result="InterstitialAdID" ini="Engine" section="/Script/ADSSettings.ADSSettingsEditor" property="InterstitialAdID" default="0"/><!---->
+	</init>
+    <resourceCopies>
+		<copyFile src="$S(PluginDir)/../ThirdParty/libs/adslib.jar" dst="$S(BuildDir)/libs/adslib.jar" />
+	</resourceCopies>
+	<gradleProperties>
+		android.jetifier.ignorelist = pass
+	</gradleProperties>
+	<buildGradleAdditions>
+		<insert>
+			dependencies {
+			    implementation 'com.yandex.android:mobileads:5.8.0'			
+			    <!--implementation files('libs/adslib.jar')-->
+			}
+		</insert>
+	</buildGradleAdditions>
+	<androidManifestUpdates>
+		<uses-permission android:name="android.permission.INTERNET" />
+		<uses-permission android:name="android.permission.ACCESS_NETWORK"/>
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+			android:maxSdkVersion="32"/>
+
+		<setElement result="ADSCoreInterstitialAdID" value="meta-data"/>
+		<addAttribute tag="$ADSCoreInterstitialAdID" name="android:name" value="com.adscore.adslib.user_ad_unit_id"/>
+		<addAttribute tag="$ADSCoreInterstitialAdID" name="android:value" value="$S(InterstitialAdID)"/>
+		<addElement tag="application" name="ADSCoreInterstitialAdID"/>
+
+	</androidManifestUpdates>
+    <gameActivityImportAdditions>
+        <insert>
+			import android.content.pm.ApplicationInfo;
+			import android.content.pm.PackageManager;
+			import android.os.Bundle;
+		
+			import android.widget.Toast;
+			import android.graphics.SurfaceTexture;
+			import android.graphics.ImageFormat;
+			import android.graphics.PixelFormat;
+			import java.io.IOException;
+			import android.util.Log;
+			  
+			import com.example.adslib.*;
+        </insert>
+    </gameActivityImportAdditions>
+	<gameActivityImplementsAdditions>
+		<insert>
+			AdbBaseCallback,
+		</insert>
+	</gameActivityImplementsAdditions>
+		<gameActivityClassAdditions>
+            <insert>
+				private AdvBase advBase = null;
+				
+				public void showDefaultADV(){
+					Log.debug("Вызван показ баннера");
+					
+				    runOnUiThread(new Runnable() {
+				            public void run() {
+								advBase.showDefaultAdv();
+				            }
+				        }
+					);
+		        }
+				
+				public void AndroidThunkJava_ADSToast_ShowToast(String toast) {
+				    runOnUiThread(new Runnable() {
+				            public void run() {
+				                Toast.makeText(getApplicationContext(), "" + toast, Toast.LENGTH_LONG).show();
+				            }
+				        }
+					);
+				}
+				
+				/*
+					-100 - неизвестная ошибка
+					  -4 - идёт загрузка
+					  -3 - реклама должна быть загружена, но что-то пошло не так
+					  -2 - не удалось загрузить рекламу
+					  -1 - нет интернета
+					   0 - успех
+					   1 - успех, но в другом
+				 */
+				public boolean loadAd(){
+					return advBase.loadDefaultAdv();
+				}
+				public int showAD(){
+
+					switch (advBase.showDefaultAdv()){
+						case -2:
+							Log.debug("showDefaultAdv no inter net");
+							return -1;
+						case -1:
+							switch (advBase.getLoadStatus()){
+								case -1: Log.debug("showDefaultAdv ad load error");
+									advBase.loadDefaultAdv();
+									return -2;
+								case 0: Log.debug("showDefaultAdv ad uploaded but not showing");
+									return -3;
+								case 1: Log.debug("showDefaultAdv ad loading...");
+									return -4;
+								default: break;
+							}
+							break;
+						case  0:
+							Log.debug("showDefaultAdv random AD show");
+							return 0;
+						case  1:
+							Log.debug("showDefaultAdv any AD show");
+							return 1;
+						default: break;
+					}
+					return -100;
+				}
+				
+				@Override
+				public void adsCall(String str) {Log.debug("adsCall: " + str);}
+
+				@Override
+				public boolean adsLoadStatus(boolean loadStatus) {return loadStatus;}
+			</insert>
+		</gameActivityClassAdditions>
+	<gameActivityOnCreateAdditions>
+            <insert>
+				String UNITID;
+				ApplicationInfo ai = null;
+				try {
+					ai = getPackageManager().getApplicationInfo(this.getPackageName(), PackageManager.GET_META_DATA);
+					Bundle bundle = ai.metaData;
+					UNITID = bundle.getString("com.adscore.adslib.user_ad_unit_id");
+				} catch (PackageManager.NameNotFoundException e) {
+					Log.debug("Interstitial Unit ID is not setted");
+					UNITID = "demo-interstitial-yandex";
+					throw new RuntimeException(e);
+				}
+				Log.debug("USE user_ad_unit_id: " + UNITID);
+
+				advBase = new AdvBase(this.getBaseContext(), this, UNITID);
+				<!--advBase.showDefaultAdv();-->
+			</insert>
+      </gameActivityOnCreateAdditions>	
+</root>

@@ -1,0 +1,8 @@
+{
+	"BuildId": "25360045",
+	"Modules": 
+	{
+		"ADSNode": "UnrealEditor-ADSNode.dll",
+		"ADSSettings": "UnrealEditor-ADSSettings.dll"
+	}
+}

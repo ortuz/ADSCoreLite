@@ -1,0 +1,6 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Development\\ADSNode\\PCH.ADSNode.h.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\ADSNode\\Module.ADSNode.cpp.obj"
+	]
+}
