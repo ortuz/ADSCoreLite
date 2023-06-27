@@ -29,6 +29,8 @@
 
 ### Используемый проект должен быть С++ или добавьте Source файлы в свой Blueprint проект.
 
+> Можно так же просто поместить плагин по этому пути ..\Epic Games\UE_5.2\Engine\Plugins\Marketplace
+
 ### Для добавления source файлов, откройте контекстное меню Tools и выберите New C++ Class. 
 
 ![ScreenShot](Images/create_cpp.png)
