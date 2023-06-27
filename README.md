@@ -13,7 +13,7 @@
 
 ### Поддерживаемые версии Unreal Engine: 5.2, 4.27(КТТС)
 
-### По всем вопросам можете писать сюда: voidrosegd@gmail.com
+### По всем вопросам можете писать сюда: voorhu@gmail.com
 
 ### Видео инструкция на *[YouTube](https://youtu.be/S0Yz6SVNjcE)*.
 
