@@ -4,6 +4,8 @@
 <p align="center">
 <img src="https://github.com/ortuz/ADSCoreLite/blob/master/Images/ADSCoreLiteLogo.png" width=50% height=50%>
 </p>
+
+# Документация [🇷🇺](https://github.com/ortuz/ADSCoreLite/blob/master/DocRu.md) [🇺🇸](https://github.com/ortuz/ADSCoreLite/blob/master/DocEng.md)
   
 # Change List
 
