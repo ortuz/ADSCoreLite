@@ -1,10 +1,3 @@
-
-<h1 align="center">Hello everyone, we <a href="https://boosty.to/adscore/" target="_blank">VOORHU</a>, present to you ADSCore Lite</h1>
-
-<p align="center">
-<img src="https://github.com/ortuz/ADSCoreLite/blob/master/Images/ADSCoreLiteLogo.png" width=50% height=50%>
-</p>
-  
 # Documentation
 
 ### This plugin was created for easy integration of Yandex advertising into Unreal Engine projects.
