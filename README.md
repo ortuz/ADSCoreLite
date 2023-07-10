@@ -13,7 +13,7 @@
 
 ### По всем вопросам можете писать сюда: voorhu@gmail.com
 
-# Документация [🇷🇺](https://github.com/ortuz/ADSCoreLite/blob/master/DocRu.md) [🇺🇸](https://github.com/ortuz/ADSCoreLite/blob/master/DocEng.md)
+# Документация [🇷🇺](https://github.com/ortuz/ADSCoreLite/blob/master/DocRus.md) [🇺🇸](https://github.com/ortuz/ADSCoreLite/blob/master/DocEng.md)
   
 # Версии
 - ## 1.0.1
