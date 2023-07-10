@@ -11,4 +11,4 @@
 ### Stability improvements
 
 ## 1.0.0
-### Realese
+### Release
