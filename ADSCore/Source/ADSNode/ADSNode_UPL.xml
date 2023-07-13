@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--ADSCore Lite - Unreal Engine 5 Advertise Plugin for Yandex
+		Copyright (C) 2023 VOORHU <voorhu@gmail.com>
+				All Rights Reserved.-->
+
 <root xmlns:android="http://schemas.android.com/apk/res/android">
 	<init>
 		<log text="ADSCore"/>

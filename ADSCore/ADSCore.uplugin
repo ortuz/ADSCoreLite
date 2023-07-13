@@ -8,8 +8,8 @@
 	"CreatedBy": "VOORHU",
 	"CreatedByURL": "https://boosty.to/adscore",
 	"DocsURL": "https://github.com/ortuz/ADSCoreLite/blob/master/DocEng.md",
-	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/719c2e0c9c47420c9669a1f4451041cd",
-	"SupportURL": "voidrosegd@gmail.com",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e3aa986643c84ca99304d8762e547c13",
+	"SupportURL": "voorhu@gmail.com",
 	"EngineVersion": "5.2.0",
 	"CanContainContent": true,
 	"IsBetaVersion": true,
@@ -20,8 +20,7 @@
 			"Type": "Editor",
 			"LoadingPhase": "Default",
 			"PlatformAllowList": [
-				"Win64",
-				"Mac"
+				"Win64"
 			]
 		},
 		{

@@ -1,7 +1,7 @@
 /*
 * ADSCore Lite - Unreal Engine 5 Advertise Plugin for Yandex
 *
-* Copyright (C) 2023 VOORHU <voidrosegd@gmail.com> All Rights Reserved.
+* Copyright (C) 2023 VOORHU <voorhu@gmail.com> All Rights Reserved.
 */
 
 using System.IO;
