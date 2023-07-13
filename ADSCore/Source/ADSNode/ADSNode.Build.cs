@@ -16,7 +16,6 @@ public class ADSNode : ModuleRules
 
         //bUsePrecompiled = true;
 
-        //Type = ModuleType.External;
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
             // Add the import library
