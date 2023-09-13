@@ -1,8 +1,6 @@
 
 <h1 align="center">Всем привет, мы <a href="https://boosty.to/voorhu/" target="_blank">VOORHU</a>, представляем вам ADSCore Lite</h1>
 
-# Старый бусти для проверки https://boosty.to/adscore
-
 <p align="center">
 <img src="https://github.com/ortuz/ADSCoreLite/blob/master/Images/ADSCoreLiteLogo.png" width=50% height=50%>
 </p>
