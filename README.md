@@ -11,7 +11,7 @@
 
 ### Поддерживаемые версии Unreal Engine: 5.2 ✔️, 4.27 :x:
 
-### По всем вопросам можете писать сюда: voorhu@gmail.com или в наш <a href="https://discord.gg/4DsA7JB89f" target="_blank">Discord</a> 
+### По всем вопросам можете писать сюда: <a href="https://discord.gg/4DsA7JB89f" target="_blank">Discord</a> 
 
 ### Документация [🇷🇺](https://github.com/ortuz/ADSCoreLite/blob/master/DocRus.md) [🇺🇸](https://github.com/ortuz/ADSCoreLite/blob/master/DocEng.md)
   
