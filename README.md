@@ -9,7 +9,7 @@
 
 ### Поддерживаемые платформы: Android ✔️, IOS :x:
 
-### Поддерживаемые версии Unreal Engine: 5.2 ✔️, 4.27 :x:
+### Поддерживаемые версии Unreal Engine: 5.3 ✔️, 5.2 ✔️, 4.27 :x:
 
 ### По всем вопросам можете писать сюда: <a href="https://discord.gg/4DsA7JB89f" target="_blank">Discord</a> 
 
